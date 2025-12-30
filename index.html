@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Módulo de Órdenes de Servicio Técnico</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="selection-brand">
+    <div class="bg-circuit"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <header class="app-header glass-panel animate-fade-in">
+        <div>
+            <p class="eyebrow">Centro Técnico CXC</p>
+            <h1>Órdenes de Servicio</h1>
+            <p class="subtitle">Gestión integral de mantenimiento para computadoras e impresoras.</p>
+        </div>
+        <div class="header-actions">
+            <button class="btn-brand">Crear nueva orden</button>
+            <button class="btn-outline">Exportar reporte</button>
+        </div>
+    </header>
+
+    <main class="app-grid">
+        <section class="glass-panel summary animate-slide-up">
+            <div class="summary-card glass-card">
+                <h3>Órdenes activas</h3>
+                <p class="summary-value">48</p>
+                <p class="summary-meta">14 en diagnóstico · 21 en reparación · 13 en pruebas</p>
+            </div>
+            <div class="summary-card glass-card">
+                <h3>Promedio de entrega</h3>
+                <p class="summary-value">2.6 días</p>
+                <p class="summary-meta">-12% vs. semana anterior</p>
+            </div>
+            <div class="summary-card glass-card">
+                <h3>Clientes atendidos</h3>
+                <p class="summary-value">128</p>
+                <p class="summary-meta">NPS 4.8 · 96% satisfacción</p>
+            </div>
+        </section>
+
+        <section class="glass-panel form-panel animate-slide-up">
+            <div class="panel-header">
+                <div>
+                    <h2>Registro rápido</h2>
+                    <p>Captura la información clave para abrir una nueva orden.</p>
+                </div>
+                <span class="pill">Prioridad alta</span>
+            </div>
+            <form class="order-form">
+                <label>
+                    Cliente
+                    <input type="text" placeholder="Nombre completo" />
+                </label>
+                <label>
+                    Equipo
+                    <select>
+                        <option>Computadora de escritorio</option>
+                        <option>Laptop</option>
+                        <option>Impresora multifuncional</option>
+                        <option>Impresora láser</option>
+                    </select>
+                </label>
+                <label>
+                    Diagnóstico inicial
+                    <input type="text" placeholder="Ej. Pantalla azul al iniciar" />
+                </label>
+                <label>
+                    Técnico asignado
+                    <select>
+                        <option>María Palacios</option>
+                        <option>Juan Méndez</option>
+                        <option>Carlos Díaz</option>
+                    </select>
+                </label>
+                <label class="full">
+                    Observaciones
+                    <textarea rows="4" placeholder="Notas adicionales, accesorios entregados, etc."></textarea>
+                </label>
+                <div class="form-actions full">
+                    <button type="button" class="btn-outline">Guardar borrador</button>
+                    <button type="submit" class="btn-brand">Enviar a diagnóstico</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="glass-panel timeline-panel animate-slide-up">
+            <div class="panel-header">
+                <div>
+                    <h2>Flujo de trabajo</h2>
+                    <p>Controla cada etapa del servicio técnico.</p>
+                </div>
+                <button class="btn-link">Configurar etapas</button>
+            </div>
+            <ol class="timeline">
+                <li>
+                    <span class="timeline-dot"></span>
+                    <div>
+                        <h4>Recepción y check-in</h4>
+                        <p>Validación de accesorios, fotos de respaldo y firma digital.</p>
+                    </div>
+                    <span class="timeline-status">Completado</span>
+                </li>
+                <li>
+                    <span class="timeline-dot"></span>
+                    <div>
+                        <h4>Diagnóstico profundo</h4>
+                        <p>Pruebas de hardware, verificación de consumibles y firmware.</p>
+                    </div>
+                    <span class="timeline-status warning">En curso</span>
+                </li>
+                <li>
+                    <span class="timeline-dot"></span>
+                    <div>
+                        <h4>Reparación y reemplazos</h4>
+                        <p>Instalación de partes, limpieza, calibración de impresión.</p>
+                    </div>
+                    <span class="timeline-status">Pendiente</span>
+                </li>
+                <li>
+                    <span class="timeline-dot"></span>
+                    <div>
+                        <h4>Control de calidad</h4>
+                        <p>Pruebas de estrés y checklist de entrega al cliente.</p>
+                    </div>
+                    <span class="timeline-status">Pendiente</span>
+                </li>
+            </ol>
+        </section>
+
+        <section class="glass-panel table-panel animate-slide-up">
+            <div class="panel-header">
+                <div>
+                    <h2>Órdenes recientes</h2>
+                    <p>Monitorea el estado general y la prioridad.</p>
+                </div>
+                <div class="filters">
+                    <input type="search" placeholder="Buscar por cliente, equipo o folio" />
+                    <button class="btn-outline">Filtrar</button>
+                </div>
+            </div>
+            <div class="table">
+                <div class="table-row table-header">
+                    <span>Folio</span>
+                    <span>Cliente</span>
+                    <span>Equipo</span>
+                    <span>Estado</span>
+                    <span>Entrega estimada</span>
+                </div>
+                <div class="table-row glass-card">
+                    <span>#OS-2401</span>
+                    <span>Ana Torres</span>
+                    <span>Impresora láser</span>
+                    <span class="status-tag warning">Diagnóstico</span>
+                    <span>12 Sep</span>
+                </div>
+                <div class="table-row glass-card">
+                    <span>#OS-2398</span>
+                    <span>Empresa Vega</span>
+                    <span>PC Workstation</span>
+                    <span class="status-tag">Reparación</span>
+                    <span>10 Sep</span>
+                </div>
+                <div class="table-row glass-card">
+                    <span>#OS-2389</span>
+                    <span>Daniela Ruiz</span>
+                    <span>Laptop</span>
+                    <span class="status-tag success">Listo para entrega</span>
+                    <span>08 Sep</span>
+                </div>
+            </div>
+        </section>
+
+        <aside class="glass-panel insights-panel animate-slide-up">
+            <h2>Panel de control</h2>
+            <div class="insight-card glass-card">
+                <h3>Inventario crítico</h3>
+                <p>5 cartuchos HP 85A · 3 SSD 512 GB</p>
+                <button class="btn-link">Solicitar insumos</button>
+            </div>
+            <div class="insight-card glass-card">
+                <h3>Alertas del día</h3>
+                <ul>
+                    <li>3 órdenes rebasaron SLA de 72h.</li>
+                    <li>2 equipos pendientes de aprobación del cliente.</li>
+                    <li>1 impresora requiere refacciones especiales.</li>
+                </ul>
+            </div>
+            <div class="insight-card glass-card">
+                <h3>Indicadores rápidos</h3>
+                <div class="kpi">
+                    <span>Backlog</span>
+                    <strong>18%</strong>
+                </div>
+                <div class="kpi">
+                    <span>Reingresos</span>
+                    <strong>3.2%</strong>
+                </div>
+                <div class="kpi">
+                    <span>Productividad</span>
+                    <strong>92%</strong>
+                </div>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>
